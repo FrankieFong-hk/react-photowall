@@ -3,8 +3,11 @@ import Photo from "./Photo";
 import PropTypes from 'prop-types'
 
 const PhotoWall = (props) => (
-    <div className="photoGrid">
-        {props.posts.map((post, index) => <Photo  key={index} post={post} onRemovePhoto={props.onRemovePhoto}/>)}
+    <div>
+        <button className="addIcon" onClick={props.onNavigate}></button>
+        <div className="photoGrid">
+            {props.posts.map((post, index) => <Photo  key={index} post={post} onRemovePhoto={props.onRemovePhoto}/>)}
+        </div>
     </div>
 )
 
