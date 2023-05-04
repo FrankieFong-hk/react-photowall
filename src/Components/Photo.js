@@ -12,8 +12,8 @@ const Photo = (props) => {
                 </p>
             </figcaption>
             <div className="button-container">
-                <button className="remove-button" onClick={() => {
-                    props.onRemovePhoto(post);
+                <button onClick={() => {
+                    props.removePost(props.index);
                 }}> Remove </button>
             </div>
         </figure>
@@ -22,7 +22,6 @@ const Photo = (props) => {
 
 Photo.propTypes = {
     post: PropTypes.object.isRequired,
-    onRemovePhoto: PropTypes.func.isRequired
 }
 
 export default Photo;
