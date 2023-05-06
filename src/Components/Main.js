@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Title from "./Title";
 import PhotoWall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link} from "react-router-dom";
 import { removePost } from "../redux/actions";
     
 class Main extends Component {
@@ -15,20 +15,29 @@ class Main extends Component {
 
     render() {
         return(
-            <Routes>
-                <Route exact path="/" element={
-                    <>
-                        <Title title={'Photowall'}/>
-                        {/* post = props.post, remove = props.remove */}
-                        <PhotoWall {...this.props} /> 
-                        {/* <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/> */}
-                    </>    
-                }/>
+            <div>
+                <h1>
+                    <Link to="/">PhotoWall</Link>
+                </h1>
+                <Routes>
+                    <Route exact path="/" element={
+                        <>
+                        
+                            {/* post = props.post, remove = props.remove */}
+                            <PhotoWall {...this.props} /> 
+                            {/* <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/> */}
+                        </>    
+                    }/>
 
-                {/* <Route path="/AddPhoto" element={<AddPhoto onAddPhoto={(addedPost) => {
-                    this.addPhoto(addedPost);
-                }}/>}/> */}
-            </Routes>
+
+                    <Route path="/AddPhoto" element={
+                        <AddPhoto {...this.props}/>
+
+                    }/>
+                </Routes>
+            </div>
+
+
         )
     }
 }

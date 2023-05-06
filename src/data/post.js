@@ -5,7 +5,7 @@
     "3919321_1443393332_n.jpg"
     }, {
     id: 1,
-    description: "Aliens???",
+    description: "Aliens",
     imageLink: "https://s3.india.com/wp-content/uploads/2017/12/rocket.jpg"
     }, {
     id: 2,
