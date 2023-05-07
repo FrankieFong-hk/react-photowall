@@ -1,6 +1,17 @@
 import posts from "../data/post";
+import { combineReducers } from "redux";
 
-const postReducer = function postsReducer(state = posts, action) {
+function commentsReducer(state = [], action) {
+    switch (action.type){
+        case 'ADD_COMMENT':
+            return [...state, action.comment];
+        default:
+            return state;
+    }
+    return state;
+}
+
+function postsReducer(state = posts, action) {
 
     switch (action.type){
         case 'REMOVE_POST':
@@ -17,4 +28,6 @@ const postReducer = function postsReducer(state = posts, action) {
     //removePhoto action
 }
 
-export default postReducer
+const rootReducer = combineReducers({postsReducer, commentsReducer})
+
+export default rootReducer

@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import Title from "./Title";
 import PhotoWall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
 import { Route, Routes, Link} from "react-router-dom";
-import { removePost } from "../redux/actions";
-    
+import Single from "./Single";
+  
+
 class Main extends Component {
     constructor() {
         super();
@@ -14,6 +14,7 @@ class Main extends Component {
     }
 
     render() {
+
         return(
             <div>
                 <h1>
@@ -33,6 +34,11 @@ class Main extends Component {
                     <Route path="/AddPhoto" element={
                         <AddPhoto {...this.props}/>
 
+                    }/>
+
+                    <Route path="/single/:id" element={
+                        
+                        <Single {...this.props}/>
                     }/>
                 </Routes>
             </div>

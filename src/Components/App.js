@@ -9,7 +9,8 @@ import  withRouter  from "./WithRouter";
 
 function mapStateToProps(state) {
     return {
-        posts: state
+        posts: state.postsReducer,
+        comments: state.commentsReducer
     }
 }
 
