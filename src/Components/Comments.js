@@ -12,6 +12,7 @@ const Comments = (props) => {
         e.preventDefault();
         const comment = e.target.elements.comment.value;
         props.addComment(comment, props.id);
+        e.target.elements.comment.value = "";
     };
     console.log(props.comments)
     return(
