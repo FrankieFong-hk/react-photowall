@@ -8,13 +8,15 @@ const Single = (props) => {
     const {id} = useParams();
     const post = posts.find((post) => post.id === Number(id));
     
-    const comments = props.comments;
+    const comments = props.comments[id] || [];
+
+    const index = posts.findIndex((post) => post.id === Number(id));
     
-    console.log(comments);
+    console.log(index);
     return(
         <div className="single-photo">
-            <Photo post={post}/>
-            <Comments addComment={props.addComment} comments={comments}/>
+            <Photo post={post} {...props} index={index}/>
+            <Comments addComment={props.addComment} comments={comments} id = {id}/>
         </div>
     )
 }
