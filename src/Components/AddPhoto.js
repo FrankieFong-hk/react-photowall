@@ -17,7 +17,7 @@ const AddPhoto = (props) => {
         }
 
         if(imageLink && description){
-            props.addPost(post);
+            props.startAddingPost(post);
             // props.onHistory.push('/');
             // props.onAddPhoto(post)
             navigate('/')

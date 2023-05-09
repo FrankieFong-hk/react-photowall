@@ -1,0 +1,116 @@
+[debug] [2023-05-08T14:00:45.872Z] ----------------------------------------------------------------------
+[debug] [2023-05-08T14:00:45.873Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-08T14:00:45.874Z] CLI Version:   11.30.0
+[debug] [2023-05-08T14:00:45.874Z] Platform:      win32
+[debug] [2023-05-08T14:00:45.874Z] Node Version:  v18.15.0
+[debug] [2023-05-08T14:00:45.875Z] Time:          Mon May 08 2023 22:00:45 GMT+0800 (香港標準時間)
+[debug] [2023-05-08T14:00:45.875Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-08T14:00:45.879Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T14:00:45.880Z] > authorizing via signed-in user (httfong@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\project\react\react-photowall
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-08T14:01:04.460Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-05-08T14:01:05.012Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-05-08T14:01:05.012Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project photowall-79647 (Photowall) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-05-08T14:01:10.971Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-05-08T14:01:10.971Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/photowall-79647
+[debug] [2023-05-08T14:01:12.184Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com 200
+[debug] [2023-05-08T14:01:12.184Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2023-05-08T14:01:12.184Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2023-05-08T14:01:12.184Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/photowall-79647
+[debug] [2023-05-08T14:01:13.418Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2023-05-08T14:01:13.418Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2023-05-08T14:01:23.430Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-05-08T14:01:23.430Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/photowall-79647
+[debug] [2023-05-08T14:01:24.595Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com 200
+[debug] [2023-05-08T14:01:24.595Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-05-08T14:01:24.598Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/photowall-79647 [none]
+[debug] [2023-05-08T14:01:24.851Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/photowall-79647 200
+[debug] [2023-05-08T14:01:24.851Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/photowall-79647 {"projectId":"photowall-79647","projectNumber":"1028515941024","displayName":"Photowall","name":"projects/photowall-79647","resources":{"hostingSite":"photowall-79647"},"state":"ACTIVE","etag":"1_eda489ee-1166-48c9-8976-a2e4bc3ac23c"}
+[debug] [2023-05-08T14:02:10.243Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances databaseId=photowall-79647-default-rtdb&validateOnly=true
+[debug] [2023-05-08T14:02:10.243Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances {"type":"default_database"}
+[debug] [2023-05-08T14:02:10.917Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances 200
+[debug] [2023-05-08T14:02:10.917Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances {"name":"projects/1028515941024/locations/asia-southeast1/instances/photowall-79647-default-rtdb","project":"projects/1028515941024","databaseUrl":"https://photowall-79647-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-05-08T14:02:10.918Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances databaseId=photowall-79647-default-rtdb
+[debug] [2023-05-08T14:02:10.918Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances {"type":"default_database"}
+[debug] [2023-05-08T14:02:11.757Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances 200
+[debug] [2023-05-08T14:02:11.757Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/photowall-79647/locations/asia-southeast1/instances {"name":"projects/1028515941024/locations/asia-southeast1/instances/photowall-79647-default-rtdb","project":"projects/1028515941024","databaseUrl":"https://photowall-79647-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-05-08T14:02:18.877Z] >>> [apiv2][query] GET https://photowall-79647-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2023-05-08T14:02:20.479Z] <<< [apiv2][status] GET https://photowall-79647-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-05-08T14:02:20.479Z] <<< [apiv2][body] GET https://photowall-79647-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [stream]
+[info] +  Database Rules for photowall-79647-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2023-05-08T14:02:20.483Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firestore.googleapis.com [none]
+[debug] [2023-05-08T14:02:20.483Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firestore.googleapis.com x-goog-quota-user=projects/photowall-79647
+[debug] [2023-05-08T14:02:21.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firestore.googleapis.com 200
+[debug] [2023-05-08T14:02:21.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/photowall-79647/services/firestore.googleapis.com [omitted]
+[debug] [2023-05-08T14:02:21.688Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/photowall-79647/databases/(default) [none]
+[debug] [2023-05-08T14:02:21.797Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/photowall-79647/databases/(default) 200
+[debug] [2023-05-08T14:02:21.797Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/photowall-79647/databases/(default) {"name":"projects/photowall-79647/databases/(default)","uid":"f8b0a3ae-0854-4c41-aa21-b2047cb8f3c6","createTime":"2023-05-08T13:50:26.737996Z","updateTime":"2023-05-08T13:50:26.737996Z","locationId":"asia-east2","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","appEngineIntegrationMode":"DISABLED","keyPrefix":"n","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IP/7y7Px5f4CMK3x4+ru5f4C"}
+[debug] [2023-05-08T14:02:21.798Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-05-08T14:02:21.798Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T14:02:21.798Z] > authorizing via signed-in user (httfong@gmail.com)
+[debug] [2023-05-08T14:02:21.798Z] [iam] checking project photowall-79647 for permissions ["firebase.projects.get"]
+[debug] [2023-05-08T14:02:21.798Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/photowall-79647:testIamPermissions [none]
+[debug] [2023-05-08T14:02:21.798Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/photowall-79647:testIamPermissions x-goog-quota-user=projects/photowall-79647
+[debug] [2023-05-08T14:02:21.798Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photowall-79647:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-08T14:02:22.684Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/photowall-79647:testIamPermissions 200
+[debug] [2023-05-08T14:02:22.684Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/photowall-79647:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-05-08T14:02:33.226Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/releases pageSize=10&pageToken=
+[debug] [2023-05-08T14:02:34.304Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/releases 200
+[debug] [2023-05-08T14:02:34.305Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/releases {"releases":[{"name":"projects/photowall-79647/releases/cloud.firestore","rulesetName":"projects/photowall-79647/rulesets/44692d58-0565-4447-aa6a-5228296af64d","createTime":"2023-05-08T13:50:33.409527Z","updateTime":"2023-05-08T13:51:25.614502Z"}]}
+[debug] [2023-05-08T14:02:34.305Z] Found ruleset: projects/photowall-79647/rulesets/44692d58-0565-4447-aa6a-5228296af64d
+[debug] [2023-05-08T14:02:34.305Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/rulesets/44692d58-0565-4447-aa6a-5228296af64d [none]
+[debug] [2023-05-08T14:02:35.330Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/rulesets/44692d58-0565-4447-aa6a-5228296af64d 200
+[debug] [2023-05-08T14:02:35.330Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/photowall-79647/rulesets/44692d58-0565-4447-aa6a-5228296af64d [omitted]
+[debug] [2023-05-08T14:02:35.369Z] Error: EISDIR: illegal operation on a directory, open 'C:\project\react\react-photowall\'
+    at Object.openSync (node:fs:601:3)
+    at Object.writeFileSync (node:fs:2249:35)
+    at Object.createFileSync (C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:63:6)
+    at Config.writeProjectFile (C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\rules.js:50:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:33:5)
+    at async init (C:\Users\httfo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -3,14 +3,19 @@ import PhotoWall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
 import { Route, Routes, Link} from "react-router-dom";
 import Single from "./Single";
+
   
 
 class Main extends Component {
-    constructor() {
-        super();
-        this.state = {
-            posts: [],
-        }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         posts: [],
+    //     }
+    // }
+
+    componentDidMount() {
+        this.props.startLoadingPost();
     }
 
     render() {
