@@ -13,9 +13,14 @@ class Main extends Component {
     //         posts: [],
     //     }
     // }
+    state = { loading: true }
 
     componentDidMount() {
-        this.props.startLoadingPost();
+        this.props.startLoadingPost().then(() => {
+            this.setState({ loading: false });
+        });
+        this.props.startLoadingComment();
+
     }
 
     render() {
@@ -43,7 +48,7 @@ class Main extends Component {
 
                     <Route path="/single/:id" element={
                         
-                        <Single {...this.props}/>
+                        <Single loading={this.state.loading} {...this.props}/>
                     }/>
                 </Routes>
             </div>

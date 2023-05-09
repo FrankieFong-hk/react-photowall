@@ -11,7 +11,7 @@ const Comments = (props) => {
     const handlerSubmit = (e) => {
         e.preventDefault();
         const comment = e.target.elements.comment.value;
-        props.addComment(comment, props.id);
+        props.startAddingComment(comment, props.id);
         e.target.elements.comment.value = "";
     };
     console.log(props.comments)

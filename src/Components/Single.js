@@ -12,13 +12,18 @@ const Single = (props) => {
 
     const index = posts.findIndex((post) => post.id === Number(id));
     
-    console.log(index);
-    return(
-        <div className="single-photo">
-            <Photo post={post} {...props} index={index}/>
-            <Comments addComment={props.addComment} comments={comments} id = {id}/>
-        </div>
-    )
+    if(props.loading === true) {
+        return <div className="loader">Loading</div>
+    } else if(post){
+        return(
+            <div className="single-photo">
+                <Photo post={post} {...props} index={index}/>
+                <Comments startAddingComment={props.startAddingComment} comments={comments} id = {id}/>
+            </div>
+        )
+    }else{
+        return <h1 className="loader">No Post Found</h1>
+    }
 }
 
 export default Single;
