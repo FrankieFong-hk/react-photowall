@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const PhotoWall = (props) => (
     <div>
-        <Link className="addIcon" to="/AddPhoto"></Link>
+        <Link className="addIcon" to="/react-photowall/AddPhoto"></Link>
         <div className="photoGrid">
             {props.posts
                 .sort((x, y) => {

@@ -24,7 +24,7 @@ const Photo = (props) => {
 
                     navigate('/react-photowall/');
                 }}> Remove </button>
-                <Link className="button" to={`/react-photowall//single/${post.id}`}>
+                <Link className="button" to={`/react-photowall/single/${post.id}`}>
                     <div className="comment-count">
                     <div className="speech-bubble"></div>
                         {props.comments[post.id] ? props.comments[post.id].length : 0}
