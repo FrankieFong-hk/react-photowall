@@ -20,7 +20,7 @@ const AddPhoto = (props) => {
             props.startAddingPost(post);
             // props.onHistory.push('/');
             // props.onAddPhoto(post)
-            navigate('/')
+            navigate('/react-photowall/')
         }
     }
 

@@ -22,7 +22,7 @@ const Photo = (props) => {
                     props.startRemovingPost(props.index, post.id);
                     // props.removePost(props.index);
 
-                    navigate('/');
+                    navigate('/react-photowall/');
                 }}> Remove </button>
                 <Link className="button" to={`/single/${post.id}`}>
                     <div className="comment-count">

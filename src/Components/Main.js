@@ -28,10 +28,10 @@ class Main extends Component {
         return(
             <div>
                 <h1>
-                    <Link to="/">PhotoWall</Link>
+                    <Link to="/react-photowall/">PhotoWall</Link>
                 </h1>
                 <Routes>
-                    <Route exact path="/" element={
+                    <Route exact path="/react-photowall/" element={
                         <>
                         
                             {/* post = props.post, remove = props.remove */}
@@ -41,12 +41,12 @@ class Main extends Component {
                     }/>
 
 
-                    <Route path="/AddPhoto" element={
+                    <Route path="/react-photowall/AddPhoto" element={
                         <AddPhoto {...this.props}/>
 
                     }/>
 
-                    <Route path="/single/:id" element={
+                    <Route path="/react-photowall/single/:id" element={
                         
                         <Single loading={this.state.loading} {...this.props}/>
                     }/>
